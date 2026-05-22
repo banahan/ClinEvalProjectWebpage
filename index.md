@@ -13,8 +13,9 @@ Through strategic integration with our ongoing research streams, ClinEval enhanc
 
 This research initiative implements a structured three-phase testing approach: alpha testing for initial validation, AB testing for comparative analysis against existing solutions and variations, followed by beta testing in simulated clinical environments. Results from each phase will feed directly into our development cycle, enabling iterative improvements to both our novel AI models.
 
-The project's success metrics include quantitative performance measures, clinical utility assessment, and the dissemination to the greater community of the outcomes of these research milestones. By connecting our various research streams through a unified validation framework, ClinEval creates a sustainable blueprint and infrastructure for advancing medical imaging technology while fostering long-term institutional partnerships between UCD school of Computer Science and the Mater Hospital's radiology department.
+The project's success metrics include quantitative performance measures, clinical utility assessment, and the dissemination to the greater community of the outcomes of these research milestones. By connecting our various research streams through a unified validation framework, ClinEval creates a sustainable blueprint and infrastructure for advancing medical imaging technology while fostering long-term institutional partnerships between UCD School of Computer Science and the Mater Hospital's radiology department.
 
 
-
+[Meet the Research Team](./_team_members.md)
+[Read our Research Papers](./publications/papers_home.md)
 </div>
