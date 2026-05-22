@@ -11,6 +11,6 @@ title: Publications
 
 - Quantitative and qualitative assessment of generative AI for cross-modal CT-to-MRI translation in spine imaging    
   - In Proceedings of the IEEE International Symposium on Biomedical Imaging (ISBI) (2026)
-      - [Click for more about this paper](./paper1.md)  
+      - [Click for more about this paper](./publications/paper1.md)  
 
 </div>
