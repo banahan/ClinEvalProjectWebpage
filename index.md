@@ -17,7 +17,7 @@ The project's success metrics include quantitative performance measures, clinica
 
 
 <div style="text-align: center;">
-  <img src="{{ site.baseurl }}/images/ClinEval Project Workflow Diagram.png" alt="ClinEval Project Workflow Diagram" width="450">
+  <img src="{{ site.baseurl }}/images/ClinEval Project Workflow Diagram.png" alt="ClinEval Project Workflow Diagram" width="650">
 </div>
 
 ## Funding
