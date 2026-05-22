@@ -1,6 +1,6 @@
 ---
 layout: default
-title: ClinEval Publications
+title: Publications
 ---
 
 <div style="text-align: justify;" markdown="1">
