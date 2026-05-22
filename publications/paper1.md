@@ -20,4 +20,3 @@ The application of Generative AI for cross-modal image-to-image translation hold
 ### Poster
 
 ![ISBI 2026 Paper in Poster]({{ site.baseurl }}/images/paper1_poster_form.png)  
-<\div>
