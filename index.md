@@ -16,6 +16,6 @@ This research initiative implements a structured three-phase testing approach: a
 The project's success metrics include quantitative performance measures, clinical utility assessment, and the dissemination to the greater community of the outcomes of these research milestones. By connecting our various research streams through a unified validation framework, ClinEval creates a sustainable blueprint and infrastructure for advancing medical imaging technology while fostering long-term institutional partnerships between UCD School of Computer Science and the Mater Hospital's radiology department.
 
 
-[Meet the Research Team](./_team_members.md)
+[Meet the Research Team](./_team_members.md)  
 [Read our Research Papers](./publications/papers_home.md)
 </div>
