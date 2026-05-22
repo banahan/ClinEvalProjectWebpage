@@ -7,7 +7,7 @@ title: People
 ## Research Outputs:  
 
 - Quantitative and qualitative assessment of generative AI for cross-modal CT-to-MRI translation in spine imaging    
-  - In Proceedings of the IEEE International Symposium on Biomedical Imaging (ISBI) (2026)  
- 
+  - In Proceedings of the IEEE International Symposium on Biomedical Imaging (ISBI) (2026)
+      - [Read this Paper](./publications/paper1.md)  
 
 </div>
