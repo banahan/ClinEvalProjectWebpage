@@ -1,5 +1,5 @@
 
-
+<div style="text-align: justify;" markdown="1">
 # ClinEval: Building Collaborations and Evidence towards Clinical AI Innovation in Ireland
 
 ## Purpose and Vision
@@ -48,3 +48,4 @@ Jane is a stroke fellow radiologist at the MMUH. She has been engaged with the i
 - Quantitative and qualitative assessment of generative AI for cross-modal CT-to-MRI translation in spine imaging  
   - In Proceedings of the IEEE International Symposium on Biomedical Imaging (ISBI) (2026)  
 
+</div>
