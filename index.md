@@ -18,4 +18,7 @@ The project's success metrics include quantitative performance measures, clinica
 
 [Meet the Research Team](./team_members_.md)  
 [Read our Research Papers](./publications/papers_home.md)
+
+![ClinEval Project Image]({{ site.baseurl }}/images/ClinEval Project Workflow Diagram.pdf)
+
 </div>
