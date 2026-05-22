@@ -22,4 +22,9 @@ The project's success metrics include quantitative performance measures, clinica
 <div style="text-align: center;">
   <img src="{{ site.baseurl }}/images/ClinEval Project Workflow Diagram.png" alt="ClinEval Project Workflow Diagram" width="450">
 </div>
+
+## Funding
+
+We are grateful for the grant funding and support we have received from the Mater Hospital Foundation and the UCD AI Healthcare Hub. Without this support this research would not have been possible.
+
 </div>
