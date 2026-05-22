@@ -24,4 +24,7 @@ The project's success metrics include quantitative performance measures, clinica
 
 We are grateful for the grant funding and support we have received from the Mater Hospital Foundation and the UCD AI Healthcare Hub. Without this support this research would not have been possible.
 
+
+## Contact  
+Please visit this [link](https://forms.gle/PnDYMN1YgrTZM2bW7 "ClinEval Contact Form") to make contact with us
 </div>
