@@ -32,19 +32,19 @@ Prateek is a Research Assistant at UCD and the Insight Research Ireland Centre f
 
 __Molly Godson Treacy__  
 
-Molly is a fourth-year registrar radiologist at the MMUH. She has been actively involved in the synthetic lumbar spine assessment project. This project aims to evaluate different AI architectures for image generation for the lumbar spine and for cauda equina syndrome. The outcomes from this study will influence future work on this topic
+Molly is a fourth-year registrar radiologist at the MMUH. She is working on the synthetic lumbar spine assessment project. This project aims to evaluate different AI architectures for image generation for the lumbar spine and for cauda equina syndrome. The outcomes from this study will influence future work on this topic
 
 __Sadhbh Doherty__  
 
-Sadhbh is a fourth-year registrar radiologist at the MMUH. She has been actively involved in the explainable AI for ultrasound thyroid classification. The aim of this project is to provide additional clinical context for sonographers and radiologist to improve the categorisation of nodules in the thyroid.
+Sadhbh is a fourth-year registrar radiologist at the MMUH. She has been working on the explainable AI for ultrasound thyroid classification. The aim of this project is to provide additional clinical context for sonographers and radiologist to improve the categorisation of nodules in the thyroid.
 
 __Jane Burns__  
 
-Jane is a stroke fellow radiologist at the MMUH. She has been actively involved in the in stroke progression forecasting and synthesis. The aim of this project is to provide additional clinical context for neurologists and radiologists to improve the triaging and access to time critical care during stroke presentations.
+Jane is a stroke fellow radiologist at the MMUH. She has been engaged with the in stroke progression forecasting and synthesis. The aim of this project is to provide additional clinical context for neurologists and radiologists to improve the triaging and access to time critical care during stroke presentations.
 
 
 ## Research Outputs:
 
 - Quantitative and qualitative assessment of generative AI for cross-modal CT-to-MRI translation in spine imaging  
-  - In Proceedings of the IEEE International Symposium on Biomedical Imaging (ISBI) (2026  
+  - In Proceedings of the IEEE International Symposium on Biomedical Imaging (ISBI) (2026)  
 
