@@ -1,3 +1,9 @@
 theme: minima
 title: ClinEval
 author: Paul Banahan
+
+
+header_pages:
+  - index.md
+  - _team_members.md
+  - publications/papers_home.md
