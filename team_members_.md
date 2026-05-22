@@ -35,5 +35,3 @@ __Dr. Jane Burns__
 
 Jane is a stroke fellow radiologist at the MMUH. She has been engaged with the in stroke progression forecasting and synthesis. The aim of this project is to provide additional clinical context for neurologists and radiologists to improve the triaging and access to time critical care during stroke presentations.
 
-
-<\div>
