@@ -22,4 +22,4 @@ Recent years have seen the rapid adoption of AI in clinical spaces around the wo
 
 ### Poster
 
-![Paper as a Poster]({{ site.baseurl }}/images/sashimi.png)  
+![Paper as a Poster]({{ site.baseurl }}/images/sashimi.PNG)  
