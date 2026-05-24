@@ -1,9 +1,0 @@
-theme: minima
-title: ClinEval
-author: Paul Banahan
-
-
-header_pages:
-  - index.md
-  - team_members_.md
-  - publications.md

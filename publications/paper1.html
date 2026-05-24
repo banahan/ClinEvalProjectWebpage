@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function () {
+      var REPO = 'ClinEvalProjectWebpage';
+      var base = location.hostname.endsWith('github.io')
+        ? '/' + REPO + '/'
+        : (location.pathname.indexOf('/' + REPO) === 0 ? '/' + REPO + '/' : '/');
+      var el = document.createElement('base');
+      el.href = base;
+      document.head.appendChild(el);
+    })();
+  </script>
+  <script src="js/theme-init.js"></script>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>ClinEval — Quantitative and Qualitative Assessment</title>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="team.html">Team</a>
+      <a href="publications.html">Publications</a>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <h1>Quantitative and qualitative assessment of generative AI for cross-modal CT-to-MRI translation in spine imaging</h1>
+
+    <p><strong>Authors:</strong> Paul Banahan, Edward McDermott, Molly Godson Treacy, Prateek Mathur, David Caldwell, Eimear Kyle, Aonghus Lawlor, Peter MacMahon</p>
+    <p><strong>Published in:</strong> In Proceedings of the IEEE International Symposium on Biomedical Imaging (ISBI) (2026)</p>
+
+    <h2>Abstract</h2>
+    <p>The application of Generative AI for cross-modal image-to-image translation holds significant potential in emergency care, particularly for spinal pathologies such as Cauda Equina Syndrome, where timely MRI access is often critical yet not always accessible. In such cases, synthetic MRI translated from the more readily available CT imaging could provide an interim solution to support clinical assessment. This study compares five generative methods for CT-to-MRI translation through both quantitative analysis using standard computer vision metrics and expert qualitative evaluation via a blinded randomised survey. The survey, delivered through a custom-designed web application, examined radiologists' perceptions of image quality, anatomical fidelity and diagnostic confidence. The findings reveal a clear disconnect between quantitative performance and clinical opinion, as models achieving the highest numerical scores were not consistently preferred by experts. Models incorporating anatomical guidance were perceived as more plausible, highlighting the need for evaluation frameworks and model objectives that are more closely aligned with clinical interpretation.</p>
+
+    <h2>Links</h2>
+    <ul>
+      <li><a href="https://ieeexplore.ieee.org/document/11516047" rel="noopener noreferrer">Link to Paper</a></li>
+    </ul>
+
+    <h2>Poster</h2>
+    <figure class="figure-center">
+      <img class="poster-image" src="images/paper1_poster_form.png" alt="ISBI 2026 Paper in Poster">
+    </figure>
+  </main>
+
+  <div id="theme-app"></div>
+  <script src="https://unpkg.com/vue@3.5.13/dist/vue.global.prod.js" integrity="sha384-W/1Fp/LgAYO/oTn9Gs+PbeWuMuq1eQCnUMPCeg8POmMYchhzxctjEqtbiCIxDOON" crossorigin="anonymous"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
