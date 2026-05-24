@@ -77,6 +77,32 @@
   height: auto;
 }
 
+.site-footer {
+  margin-top: var(--space-xl);
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+}
+
+.site-footer__inner {
+  max-width: var(--header-max-width);
+  margin: 0 auto;
+  padding: var(--space-lg);
+  text-align: left;
+}
+
+.site-footer__title {
+  margin: 0 0 var(--space-xs);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+.site-footer__author {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+}
+
 #theme-app {
   position: fixed;
   bottom: 1.25rem;
