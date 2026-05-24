@@ -77,11 +77,15 @@
   height: auto;
 }
 
-.theme-toggle {
+#theme-app {
   position: fixed;
   bottom: 1.25rem;
   right: 1.25rem;
-  z-index: 1000;
+  z-index: 1200;
+}
+
+.theme-toggle {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -122,6 +126,3 @@
   pointer-events: none;
 }
 
-#theme-app {
-  position: static;
-}
