@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function () {
+      var REPO = 'ClinEvalProjectWebpage';
+      var base = location.hostname.endsWith('github.io')
+        ? '/' + REPO + '/'
+        : (location.pathname.indexOf('/' + REPO) === 0 ? '/' + REPO + '/' : '/');
+      var el = document.createElement('base');
+      el.href = base;
+      document.head.appendChild(el);
+    })();
+  </script>
+  <script src="js/theme-init.js"></script>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>ClinEval — Publications</title>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="team.html">Team</a>
+      <a href="publications.html">Publications</a>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <h1>ClinEval Research Papers</h1>
+
+    <article class="publication-item">
+      <strong>Quantitative and qualitative assessment of generative AI for cross-modal CT-to-MRI translation in spine imaging</strong>
+      <ul>
+        <li>In Proceedings of the IEEE International Symposium on Biomedical Imaging (ISBI) (2026)</li>
+        <li><a href="publications/paper1.html">Click for more about this paper</a></li>
+      </ul>
+    </article>
+
+    <article class="publication-item">
+      <strong>Lesion‐Aware CT-to-MRI Synthesis using a Mask‐Informed Diffusion with Adaptive‐Weighted Loss (MIDAS)</strong>
+      <ul>
+        <li>In Proceedings of the Simulation and Synthesis in Medical Imaging 10th International Workshop, SASHIMI 2025, MICCAI 2025</li>
+        <li><a href="publications/sashimi.html">Click for more about this paper</a></li>
+      </ul>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p class="site-footer__title">ClinEval</p>
+      <p class="site-footer__author">Paul Banahan</p>
+    </div>
+  </footer>
+
+  <div id="theme-app"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>

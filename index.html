@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function () {
+      var REPO = 'ClinEvalProjectWebpage';
+      var base = location.hostname.endsWith('github.io')
+        ? '/' + REPO + '/'
+        : (location.pathname.indexOf('/' + REPO) === 0 ? '/' + REPO + '/' : '/');
+      var el = document.createElement('base');
+      el.href = base;
+      document.head.appendChild(el);
+    })();
+  </script>
+  <script src="js/theme-init.js"></script>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/workflow-diagram.css">
+  <title>ClinEval — Home</title>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="team.html">Team</a>
+      <a href="publications.html">Publications</a>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <h1>ClinEval: Building Collaborations and Evidence towards Clinical AI Innovation in Ireland</h1>
+
+    <h2>Purpose and Vision</h2>
+    <p>The ClinEval project addresses a critical challenge in modern radiology: the growing gap between the rapid advancement of artificial intelligence in medical imaging and its practical implementation in clinical settings. The project builds upon our existing research portfolio in medical imaging synthesis and interpretation, creating a comprehensive repeatable framework for validating novel AI models in clinical settings. Leveraging our current developments in brain image synthesis (CT to MRI conversion), lumbar spine image synthesis (CT to MRI conversion), and Explainable AI (XAI) for ultrasound thyroid classification, this initiative establishes a robust pipeline for translating research lab innovations into clinical practice.</p>
+
+    <p>Through strategic integration with our ongoing research streams, ClinEval enhances the validation and deployment of our AI-powered imaging solutions. The project focuses on establishing systematic testing protocols for our novel AI models, utilizing custom-developed web applications for clinical expert evaluation. Our radiology team members will conduct thorough assessments of synthesized images and classification outputs, providing critical feedback essential for model refinement.</p>
+
+    <p>This research initiative implements a structured three-phase testing approach: alpha testing for initial validation, AB testing for comparative analysis against existing solutions and variations, followed by beta testing in simulated clinical environments. Results from each phase will feed directly into our development cycle, enabling iterative improvements to both our novel AI models.</p>
+
+    <p>The project's success metrics include quantitative performance measures, clinical utility assessment, and the dissemination to the greater community of the outcomes of these research milestones. By connecting our various research streams through a unified validation framework, ClinEval creates a sustainable blueprint and infrastructure for advancing medical imaging technology while fostering long-term institutional partnerships between UCD School of Computer Science and the Mater Hospital's radiology department.</p>
+
+    <figure class="figure-center workflow-figure">
+      <div id="workflow-diagram" class="workflow-diagram" aria-busy="true">
+        <p class="workflow-diagram__fallback">Loading workflow diagram…</p>
+      </div>
+    </figure>
+
+    <h2>Funding</h2>
+    <p>We are grateful for the grant funding and support we have received from the Mater Hospital Foundation and the UCD AI Healthcare Hub. Without this support this research would not have been possible.</p>
+
+    <h2>Contact</h2>
+    <p>Please visit this <a href="https://forms.gle/PnDYMN1YgrTZM2bW7" rel="noopener noreferrer" title="ClinEval Contact Form">link</a> to make contact with us.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p class="site-footer__title">ClinEval</p>
+      <p class="site-footer__author">Paul Banahan</p>
+    </div>
+  </footer>
+
+  <div id="theme-app"></div>
+  <script src="js/workflow-config.js"></script>
+  <script src="js/workflow-diagram.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
