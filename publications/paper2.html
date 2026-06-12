@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function () {
+      var REPO = 'ClinEvalProjectWebpage';
+      var base = location.hostname.endsWith('github.io')
+        ? '/' + REPO + '/'
+        : (location.pathname.indexOf('/' + REPO) === 0 ? '/' + REPO + '/' : '/');
+      var el = document.createElement('base');
+      el.href = base;
+      document.head.appendChild(el);
+    })();
+  </script>
+  <script src="js/theme-init.js"></script>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>ClinEval — Beyond Averaging Metrics</title>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="team.html">Team</a>
+      <a href="publications.html">Publications</a>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <h1>Beyond Averaging Metrics: Patient-specific and Spatially Localised Evaluation of Synthetic MRI for Suspected Cauda Equina Syndrome</h1>
+
+    <p><strong>Authors:</strong> Paul Banahan, Prateek Mathur, Molly Godson Treacy, Edward McDermott, David Caldwell, Eimear Kyle, Aonghus Lawlor, Peter MacMahon</p>
+    <p><strong>Published in:</strong> In Proceedings of the Medical Image Understanding and Analysis (MIUA) (2026)</p>
+
+    <h2>Abstract</h2>
+    <p>Synthetic MRI generated from CT has potential value in emergency spine imaging, where MRI access may be delayed or constrained. However, evaluation of CT-to-MRI translation commonly relies on cohort-level quantitative metrics and aggregate reader scores, which may obscure clinically important failures in individual patients or local anatomical regions. This is especially problematic in suspected Cauda Equina Syndrome, where reliability depends on faithful depiction of the vertebral canal and pathology-relevant structures rather than average image similarity alone. In this pilot study, we examine whether apparent synthetic MRI performance persists beyond global averages. We re-analyse a blinded radiologist reader study using patient-wise rankings and signed confidence scores for canal and pathology assessment, and complement this with patient-wise quantitative metrics and patch-wise spatial analysis. Our results show that model rankings vary across patients, metrics, and clinical assessment criteria. Reader confidence also reveals case-specific disagreement, while patch-wise metric maps demonstrate spatially heterogeneous fidelity within individual images. These findings show that aggregate evaluation can mask patient-specific and region-specific failure modes. We argue that stronger clinical translation of synthetic MRI requires evaluation frameworks that are patient-aware, region-aware, and metric-aware, with patch-wise analysis providing one practical route to greater transparency.</p>
+
+    <h2>Links</h2>
+    <ul>
+      <p> Link to follow </p>
+      <!-- li><a href="https://ieeexplore.ieee.org/document/11516047" rel="noopener noreferrer">Link to Paper</a></li-->
+    </ul>
+
+    <h2>Poster</h2>
+    <figure class="figure-center">
+      <img class="poster-image" src="images/BeyondAveragingMetrics.png" alt="MIUA Métis 2026 Paper in Poster">
+    </figure>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p class="site-footer__title">ClinEval</p>
+      <p class="site-footer__author">Paul Banahan</p>
+    </div>
+  </footer>
+
+  <div id="theme-app"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>
