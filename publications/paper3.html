@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function () {
+      var REPO = 'ClinEvalProjectWebpage';
+      var base = location.hostname.endsWith('github.io')
+        ? '/' + REPO + '/'
+        : (location.pathname.indexOf('/' + REPO) === 0 ? '/' + REPO + '/' : '/');
+      var el = document.createElement('base');
+      el.href = base;
+      document.head.appendChild(el);
+    })();
+  </script>
+  <script src="js/theme-init.js"></script>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>ClinEval — Beyond Averaging Metrics</title>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="team.html">Team</a>
+      <a href="publications.html">Publications</a>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <h1>Redefining Emergency Spinal Imaging Pathways: A Feasibility Study using Synthetic MRI from CT in the Diagnosis of Cauda Equina Syndrome</h1>
+
+    <p><strong>Authors:</strong> Paul Banahan, Prateek Mathur, Jane Burns, Aonghus Lawlor, Peter MacMahon</p>
+    <p><strong>Published in:</strong> In Proceedings of the Medical Image Understanding and Analysis (MIUA) (2026)</p>
+
+    <h2>Abstract</h2>
+    <p>Suspected Cauda Equina Syndrome (CES) is a time-critical emergency in which delayed diagnosis and intervention can result in severe neurological harm. MRI is the reference standard for assessment, but access may be limited by scanner availability, acquisition time, cost, and patient-specific constraints. CT is more widely available in emergency settings, but the soft-tissue information required to support diagnostic and surgical decision-making in suspected CES may not be reliably available from CT alone. This creates an unmet clinical need for approaches that bridge accessible CT imaging and MRI-level anatomical information. We present a pilot feasibility study of synthetic MRI generation from CT using a real-world emergency spine imaging dataset. Our contributions are threefold: first, we evaluate representative off-the-shelf generative paradigms, including paired GAN-based translation, diffusion-based synthesis, unpaired translation, and bridge-diffusion approaches; second, we assess outputs using quantitative metrics spanning pixel fidelity, structural similarity, perceptual similarity, and distributional similarity; and third, we conduct a blinded, randomised comparative reader study evaluating overall quality, anatomical plausibility, pathological clarity, and model preference. Our findings demonstrate the technical feasibility of CT-to-MRI synthesis in this constrained clinical setting, while highlighting discrepancies between quantitative metrics and expert judgement. These results support further investigation of synthetic MRI as a feasible adjunct for addressing the unmet need for MRI-like information in emergency spine imaging pathways.</p>
+
+    <h2>Links</h2>
+    <ul>
+      <p> Link to follow </p>
+      <!-- li><a href="https://ieeexplore.ieee.org/document/11516047" rel="noopener noreferrer">Link to Paper</a></li-->
+    </ul>
+
+    <h2>Poster</h2>
+    <!--figure class="figure-center">
+      <img class="poster-image" src="images/BeyondAveragingMetrics.png" alt="MIUA Métis 2026 Paper in Poster">
+    </figure-->
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p class="site-footer__title">ClinEval</p>
+      <p class="site-footer__author">Paul Banahan</p>
+    </div>
+  </footer>
+
+  <div id="theme-app"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>
