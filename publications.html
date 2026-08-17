@@ -19,6 +19,139 @@
   <link rel="stylesheet" href="css/theme.css">
   <link rel="stylesheet" href="css/main.css">
   <title>ClinEval — Publications</title>
+  <style>
+    .pub-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.25rem;
+      padding: 2rem 0;
+    }
+
+    .pub-card {
+      aspect-ratio: 1 / 1;
+      border: 1px solid var(--border-color, #d0d0d0);
+      border-radius: 6px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      background: var(--card-bg, #fff);
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .pub-card:hover,
+    .pub-card:focus-visible {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      border-color: var(--accent-color, #3a6ea5);
+    }
+
+    .pub-card:active {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .pub-card__year {
+      display: inline-block;
+      align-self: flex-start;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      padding: 0.25em 0.65em;
+      border-radius: 3px;
+      background: var(--accent-color, #3a6ea5);
+      color: #fff;
+      line-height: 1.4;
+      flex-shrink: 0;
+    }
+
+    .pub-card__body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 0.5rem 0;
+    }
+
+    .pub-card__title {
+      font-size: 0.92rem;
+      font-weight: 600;
+      line-height: 1.35;
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .pub-card__venue {
+      font-size: 0.78rem;
+      opacity: 0.65;
+      line-height: 1.35;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .pub-card__arrow {
+      align-self: flex-end;
+      font-size: 1.1rem;
+      opacity: 0.3;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+      flex-shrink: 0;
+    }
+
+    .pub-card:hover .pub-card__arrow {
+      opacity: 0.8;
+      transform: translateX(3px);
+    }
+
+    /* Year filter bar */
+    .pub-years {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .pub-years__btn {
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 0.35em 1em;
+      border-radius: 4px;
+      border: 1px solid var(--border-color, #d0d0d0);
+      background: transparent;
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+      color: inherit;
+    }
+
+    .pub-years__btn:hover {
+      border-color: var(--accent-color, #3a6ea5);
+    }
+
+    .pub-years__btn.active {
+      background: var(--accent-color, #3a6ea5);
+      color: #fff;
+      border-color: var(--accent-color, #3a6ea5);
+    }
+
+    @media (max-width: 600px) {
+      .pub-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 0.75rem;
+      }
+      .pub-card {
+        padding: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -32,61 +165,78 @@
   <main class="page-content">
     <h1>ClinEval Research Papers</h1>
 
-    <article class="publication-item">
-      <strong>Evaluating CT Windowing for conditional MRI Synthesis in Acute Stroke Imaging</strong>
-      <ul>
-        <li>In Proceedings of the Medical Imaging and Computer-Aided Diagnosis, MICAD 2026 </li>
-        <li><a href="publications/micad2026.html">Click for more about this paper</a></li>
-      </ul>
-    </article>
-    
-    <article class="publication-item">
-      <strong>Regulate, Modulate, Differentiate: Towards Modelling Subtle Changes in Longitudinal Multiple Sclerosis MRI</strong>
-      <ul>
-        <li>In Proceedings of the Simulation and Synthesis in Medical Imaging 11th International Workshop, SASHIMI 2026, MICCAI 2026</li>
-        <li><a href="publications/sashimi2026.html">Click for more about this paper</a></li>
-      </ul>
-    </article>
-    
-    <article class="publication-item">
-      <strong>Determinism, Plausibility, and Clinical Trust in CT-to-MRI Translation for Emergency Spine Imaging</strong>
-      <ul>
-        <li>In Proceedings of the Applications of Medical AI, 5th International Workshop, AMAI 2026, MICCAI 2026</li>
-        <li><a href="publications/paper4.html">Click for more about this paper</a></li>
-      </ul>
-    </article>
-    
-    <article class="publication-item">
-      <strong>Beyond Averaging Metrics: Patient-specific and Spatially Localised Evaluation of Synthetic MRI for Suspected Cauda Equina Syndrome</strong>
-      <ul>
-        <li>In Proceedings of the Medical Image Understanding and Analysis (MIUA) (2026)</li>
-        <li><a href="publications/paper2.html">Click for more about this paper</a></li>
-      </ul>
-    </article>
+    <div class="pub-years" aria-label="Filter by year">
+      <button class="pub-years__btn active" data-year="all">All</button>
+      <button class="pub-years__btn" data-year="2026">2026</button>
+      <button class="pub-years__btn" data-year="2025">2025</button>
+    </div>
 
-    <article class="publication-item">
-      <strong>Redefining Emergency Spinal Imaging Pathways: A Feasibility Study using Synthetic MRI from CT in the Diagnosis of Cauda Equina Syndrome</strong>
-      <ul>
-        <li>In Proceedings of the Medical Image Understanding and Analysis (MIUA) (2026)</li>
-        <li><a href="publications/paper3.html">Click for more about this paper</a></li>
-      </ul>
-    </article>
-    
-    <article class="publication-item">
-      <strong>Quantitative and qualitative assessment of generative AI for cross-modal CT-to-MRI translation in spine imaging</strong>
-      <ul>
-        <li>In Proceedings of the IEEE International Symposium on Biomedical Imaging (ISBI) (2026)</li>
-        <li><a href="publications/paper1.html">Click for more about this paper</a></li>
-      </ul>
-    </article>
+    <div class="pub-grid">
 
-    <article class="publication-item">
-      <strong>Lesion‐Aware CT-to-MRI Synthesis using a Mask‐Informed Diffusion with Adaptive‐Weighted Loss (MIDAS)</strong>
-      <ul>
-        <li>In Proceedings of the Simulation and Synthesis in Medical Imaging 10th International Workshop, SASHIMI 2025, MICCAI 2025</li>
-        <li><a href="publications/sashimi.html">Click for more about this paper</a></li>
-      </ul>
-    </article>
+      <a href="publications/micad2026.html" class="pub-card" data-year="2026">
+        <span class="pub-card__year">2026</span>
+        <div class="pub-card__body">
+          <span class="pub-card__title">Evaluating CT Windowing for conditional MRI Synthesis in Acute Stroke Imaging</span>
+          <span class="pub-card__venue">Medical Imaging and Computer-Aided Diagnosis (MICAD 2026)</span>
+        </div>
+        <span class="pub-card__arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a href="publications/sashimi2026.html" class="pub-card" data-year="2026">
+        <span class="pub-card__year">2026</span>
+        <div class="pub-card__body">
+          <span class="pub-card__title">Regulate, Modulate, Differentiate: Towards Modelling Subtle Changes in Longitudinal Multiple Sclerosis MRI</span>
+          <span class="pub-card__venue">Simulation and Synthesis in Medical Imaging (SASHIMI 2026), MICCAI 2026</span>
+        </div>
+        <span class="pub-card__arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a href="publications/paper4.html" class="pub-card" data-year="2026">
+        <span class="pub-card__year">2026</span>
+        <div class="pub-card__body">
+          <span class="pub-card__title">Determinism, Plausibility, and Clinical Trust in CT-to-MRI Translation for Emergency Spine Imaging</span>
+          <span class="pub-card__venue">Applications of Medical AI (AMAI 2026), MICCAI 2026</span>
+        </div>
+        <span class="pub-card__arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a href="publications/paper2.html" class="pub-card" data-year="2026">
+        <span class="pub-card__year">2026</span>
+        <div class="pub-card__body">
+          <span class="pub-card__title">Beyond Averaging Metrics: Patient-specific and Spatially Localised Evaluation of Synthetic MRI for Suspected Cauda Equina Syndrome</span>
+          <span class="pub-card__venue">Medical Image Understanding and Analysis (MIUA 2026)</span>
+        </div>
+        <span class="pub-card__arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a href="publications/paper3.html" class="pub-card" data-year="2026">
+        <span class="pub-card__year">2026</span>
+        <div class="pub-card__body">
+          <span class="pub-card__title">Redefining Emergency Spinal Imaging Pathways: A Feasibility Study using Synthetic MRI from CT in the Diagnosis of Cauda Equina Syndrome</span>
+          <span class="pub-card__venue">Medical Image Understanding and Analysis (MIUA 2026)</span>
+        </div>
+        <span class="pub-card__arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a href="publications/paper1.html" class="pub-card" data-year="2026">
+        <span class="pub-card__year">2026</span>
+        <div class="pub-card__body">
+          <span class="pub-card__title">Quantitative and qualitative assessment of generative AI for cross-modal CT-to-MRI translation in spine imaging</span>
+          <span class="pub-card__venue">IEEE International Symposium on Biomedical Imaging (ISBI 2026)</span>
+        </div>
+        <span class="pub-card__arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a href="publications/sashimi.html" class="pub-card" data-year="2025">
+        <span class="pub-card__year">2025</span>
+        <div class="pub-card__body">
+          <span class="pub-card__title">Lesion‐Aware CT-to-MRI Synthesis using a Mask‐Informed Diffusion with Adaptive‐Weighted Loss (MIDAS)</span>
+          <span class="pub-card__venue">Simulation and Synthesis in Medical Imaging (SASHIMI 2025), MICCAI 2025</span>
+        </div>
+        <span class="pub-card__arrow" aria-hidden="true">→</span>
+      </a>
+
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -98,5 +248,25 @@
 
   <div id="theme-app"></div>
   <script src="js/app.js"></script>
+  <script>
+    document.querySelectorAll('.pub-years__btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var year = this.dataset.year;
+
+        document.querySelectorAll('.pub-years__btn').forEach(function (b) {
+          b.classList.remove('active');
+        });
+        this.classList.add('active');
+
+        document.querySelectorAll('.pub-card').forEach(function (card) {
+          if (year === 'all' || card.dataset.year === year) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
