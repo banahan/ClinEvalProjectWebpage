@@ -20,78 +20,141 @@
   <link rel="stylesheet" href="css/main.css">
   <title>ClinEval — Publications</title>
   <style>
-    .pub-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 1.25rem;
-      padding: 2rem 0;
+    /* ── Widen the content area for the publications grid ── */
+    .page-content--publications {
+      max-width: 76rem;
+      text-align: left;
     }
 
+    /* ── Year filter bar ── */
+    .pub-years {
+      display: flex;
+      gap: var(--space-sm);
+      flex-wrap: wrap;
+      margin-top: var(--space-md);
+    }
+
+    .pub-years__btn {
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 0.35em 1em;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--color-border);
+      background: transparent;
+      color: var(--color-text);
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .pub-years__btn:hover {
+      border-color: var(--color-accent);
+    }
+
+    .pub-years__btn.active {
+      background: var(--color-accent);
+      color: var(--color-bg);
+      border-color: var(--color-accent);
+    }
+
+    /* ── Card grid ── */
+    .pub-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.25rem;
+      padding: var(--space-xl) 0;
+    }
+
+    /* ── Individual card ── */
     .pub-card {
       aspect-ratio: 1 / 1;
-      border: 1px solid var(--border-color, #d0d0d0);
-      border-radius: 6px;
-      padding: 1.5rem;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 1.4rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       position: relative;
       overflow: hidden;
-      background: var(--card-bg, #fff);
+      background: var(--color-surface);
+      color: var(--color-text);
       cursor: pointer;
-      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
       text-decoration: none;
-      color: inherit;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
     }
 
     .pub-card:hover,
     .pub-card:focus-visible {
       transform: translateY(-4px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-      border-color: var(--accent-color, #3a6ea5);
+      border-color: var(--color-accent-soft);
+      text-decoration: none;
     }
 
     .pub-card:active {
       transform: translateY(-1px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
+    /* Theme-specific hover shadows */
+    [data-theme='dark'] .pub-card:hover {
+      box-shadow: 0 8px 28px rgba(158, 180, 201, 0.14);
+    }
+
+    [data-theme='light'] .pub-card:hover {
+      box-shadow: 0 8px 28px rgba(184, 134, 11, 0.12);
+    }
+
+    .pub-card:focus-visible {
+      outline: 2px solid var(--color-accent-soft);
+      outline-offset: 2px;
+    }
+
+    /* ── Year badge ── */
     .pub-card__year {
       display: inline-block;
       align-self: flex-start;
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       font-weight: 700;
       letter-spacing: 0.06em;
-      padding: 0.25em 0.65em;
-      border-radius: 3px;
-      background: var(--accent-color, #3a6ea5);
-      color: #fff;
-      line-height: 1.4;
+      padding: 0.2em 0.6em;
+      border-radius: var(--radius-sm);
+      background: var(--color-accent);
+      color: var(--color-bg);
+      line-height: 1.5;
       flex-shrink: 0;
     }
 
+    /* ── Card body ── */
     .pub-card__body {
       flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 0.6rem;
-      padding: 0.5rem 0;
+      gap: 0.5rem;
+      padding: 0.4rem 0;
+      min-height: 0;
     }
 
     .pub-card__title {
-      font-size: 0.92rem;
+      font-size: 0.88rem;
       font-weight: 600;
       line-height: 1.35;
+      color: var(--color-text);
       display: -webkit-box;
       -webkit-line-clamp: 5;
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
 
+    [data-theme='dark'] .pub-card__title {
+      color: var(--color-accent);
+    }
+
+    [data-theme='light'] .pub-card__title {
+      color: var(--color-accent);
+    }
+
     .pub-card__venue {
-      font-size: 0.78rem;
-      opacity: 0.65;
+      font-size: 0.76rem;
+      color: var(--color-text-muted);
       line-height: 1.35;
       display: -webkit-box;
       -webkit-line-clamp: 3;
@@ -99,55 +162,30 @@
       overflow: hidden;
     }
 
+    /* ── Arrow indicator ── */
     .pub-card__arrow {
       align-self: flex-end;
-      font-size: 1.1rem;
-      opacity: 0.3;
+      font-size: 1rem;
+      color: var(--color-text-muted);
+      opacity: 0.35;
       transition: opacity 0.25s ease, transform 0.25s ease;
       flex-shrink: 0;
     }
 
     .pub-card:hover .pub-card__arrow {
-      opacity: 0.8;
+      opacity: 0.85;
       transform: translateX(3px);
+      color: var(--color-accent);
     }
 
-    /* Year filter bar */
-    .pub-years {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-      margin-top: 1rem;
-    }
-
-    .pub-years__btn {
-      font-size: 0.82rem;
-      font-weight: 600;
-      padding: 0.35em 1em;
-      border-radius: 4px;
-      border: 1px solid var(--border-color, #d0d0d0);
-      background: transparent;
-      cursor: pointer;
-      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-      color: inherit;
-    }
-
-    .pub-years__btn:hover {
-      border-color: var(--accent-color, #3a6ea5);
-    }
-
-    .pub-years__btn.active {
-      background: var(--accent-color, #3a6ea5);
-      color: #fff;
-      border-color: var(--accent-color, #3a6ea5);
-    }
-
+    /* ── Responsive ── */
     @media (max-width: 600px) {
       .pub-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: 1fr;
         gap: 0.75rem;
       }
       .pub-card {
+        aspect-ratio: auto;
         padding: 1rem;
       }
     }
@@ -162,7 +200,7 @@
     </nav>
   </header>
 
-  <main class="page-content">
+  <main class="page-content page-content--publications">
     <h1>ClinEval Research Papers</h1>
 
     <div class="pub-years" aria-label="Filter by year">
