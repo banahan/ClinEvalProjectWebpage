@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function () {
+      var REPO = 'ClinEvalProjectWebpage';
+      var base = location.hostname.endsWith('github.io')
+        ? '/' + REPO + '/'
+        : (location.pathname.indexOf('/' + REPO) === 0 ? '/' + REPO + '/' : '/');
+      var el = document.createElement('base');
+      el.href = base;
+      document.head.appendChild(el);
+    })();
+  </script>
+  <script src="js/theme-init.js"></script>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>ClinEval — Regulate, Modulate, Differentiate</title>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="team.html">Team</a>
+      <a href="publications.html">Publications</a>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <h1>Regulate, Modulate, Differentiate: Towards Modelling Subtle Changes in Longitudinal Multiple Sclerosis MRI</h1>
+
+    <p><strong>Authors:</strong> Prateek Mathur, Paul Banahan, Jane Burns, Brendan Kelly, Ronan Killeen, Peter MacMahon, Aonghus Lawlor</p>
+    <p><strong>Published in:</strong> In Proceedings of the Simulation and Synthesis in Medical Imaging 11th International Workshop, SASHIMI 2026, MICCAI 2026</p>
+
+    <h2>Abstract</h2>
+    <p>MRI scans acquired during clinical follow-up, or longitudinal MRI, are central to monitoring multiple sclerosis for a patient, where new or enlarging lesions indicate disease activity and guide treatment planning. However, manual or automated identification of these changes is complicated by the rarity, variability, and poor delineation of the lesions. Furthermore, while generative AI has made strides in cross-sectional image synthesis for data augmentation, longitudinal synthesis remains underexplored. In this work, we formulate MS follow-up synthesis as a controlled conditional image-to-image translation task, where a baseline image and spatial change mask are used to synthesise a follow-up scan. We propose Regulate, Modulate, and Differentiate (RMD), a backbone-agnostic conditioning framework that mitigates baseline replication using random noise replacement, modulates generation using dual FiLM modules that capture global progression descriptors and spatial changes at different scales, and supervises sharp change structure with a Difference-of-Gaussians loss. RMD was evaluated across Pix2Pix, Gaussian diffusion, and Brownian Bridge Diffusion using internal held-out and external MSSEG-2 cohorts. In downstream new lesion detection, RMD improved lesion-level F1 and recall for Pix2Pix and Diffusion across both datasets, and for BBDM internally. Reader assessment preferred RMD over naive conditioning (47% vs. 43%) and showed significant gains in image quality and anatomical plausibility. These results position RMD as a step toward robust progression-aware synthesis for longitudinal MS MRI.</p>
+
+    <h2>Links</h2>
+    <!--ul>
+      <li><a href="https://ieeexplore.ieee.org/document/11516047" rel="noopener noreferrer">Link to Paper</a></li>
+  </ul-->
+
+    <h2>Poster</h2>
+    <figure class="figure-center">
+      <!--img class="poster-image" src="images/paper4_poster_form.png" alt="AMAI MICCAI 2026 Paper in Poster"-->
+    </figure>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p class="site-footer__title">ClinEval</p>
+      <p class="site-footer__author">Paul Banahan</p>
+    </div>
+  </footer>
+
+  <div id="theme-app"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>
