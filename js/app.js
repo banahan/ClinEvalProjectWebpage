@@ -49,9 +49,28 @@
     root.appendChild(btn);
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', mountThemeApp);
-  } else {
+  function mountLogoTooltips() {
+    document.querySelectorAll('.partner-logo[title]').forEach(function (logo) {
+      var chip = logo.closest('.logo-chip');
+      if (!chip) {
+        return;
+      }
+
+      chip.dataset.tooltip = logo.title;
+      chip.setAttribute('tabindex', '0');
+      chip.setAttribute('aria-label', logo.title);
+      logo.removeAttribute('title');
+    });
+  }
+
+  function initSiteUi() {
     mountThemeApp();
+    mountLogoTooltips();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSiteUi);
+  } else {
+    initSiteUi();
   }
 })();

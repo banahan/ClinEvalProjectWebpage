@@ -222,13 +222,7 @@
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <nav class="site-nav" aria-label="Main">
-      <a href="index.html">Home</a>
-      <a href="team.html">Team</a>
-      <a href="publications.html">Publications</a>
-    </nav>
-  </header>
+  <site-header></site-header>
 
   <main class="page-content page-content--publications">
     <h1>ClinEval Research Papers</h1>
@@ -345,14 +339,10 @@
     </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="site-footer__inner">
-      <p class="site-footer__title">ClinEval</p>
-      <p class="site-footer__author">Paul Banahan</p>
-    </div>
-  </footer>
+  <site-footer></site-footer>
 
   <div id="theme-app"></div>
+  <script src="js/layout.js"></script>
   <script src="js/app.js"></script>
   <script>
     document.querySelectorAll('.pub-years__btn').forEach(function (btn) {
