@@ -162,6 +162,36 @@
       overflow: hidden;
     }
 
+    /* ── Footer: logos + arrow ── */
+    .pub-card__footer {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 0.5rem;
+      flex-shrink: 0;
+      margin-top: 0.35rem;
+    }
+
+    .pub-card__logos {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.4rem;
+      min-width: 0;
+      flex: 1;
+    }
+
+    .pub-card__logo {
+      height: 1.75rem;
+      width: auto;
+      max-width: 4.5rem;
+      object-fit: contain;
+      flex: 0 0 auto;
+      background: #ffffff;
+      border-radius: var(--radius-sm);
+      padding: 0.15rem 0.25rem;
+    }
+
     /* ── Arrow indicator ── */
     .pub-card__arrow {
       align-self: flex-end;
@@ -217,7 +247,12 @@
           <span class="pub-card__title">Evaluating CT Windowing for conditional MRI Synthesis in Acute Stroke Imaging</span>
           <span class="pub-card__venue">Medical Imaging and Computer-Aided Diagnosis (MICAD 2026)</span>
         </div>
-        <span class="pub-card__arrow" aria-hidden="true">→</span>
+        <div class="pub-card__footer">
+          <div class="pub-card__logos">
+            <img class="pub-card__logo" src="images/logos/micad.png" alt="MICAD">
+          </div>
+          <span class="pub-card__arrow" aria-hidden="true">→</span>
+        </div>
       </a>
 
       <a href="publications/sashimi2026.html" class="pub-card" data-year="2026">
@@ -226,7 +261,13 @@
           <span class="pub-card__title">Regulate, Modulate, Differentiate: Towards Modelling Subtle Changes in Longitudinal Multiple Sclerosis MRI</span>
           <span class="pub-card__venue">Simulation and Synthesis in Medical Imaging (SASHIMI 2026), MICCAI 2026</span>
         </div>
-        <span class="pub-card__arrow" aria-hidden="true">→</span>
+        <div class="pub-card__footer">
+          <div class="pub-card__logos">
+            <img class="pub-card__logo" src="images/logos/sashimi_logo.png" alt="SASHIMI">
+            <img class="pub-card__logo" src="images/logos/miccai.png" alt="MICCAI">
+          </div>
+          <span class="pub-card__arrow" aria-hidden="true">→</span>
+        </div>
       </a>
 
       <a href="publications/paper4.html" class="pub-card" data-year="2026">
@@ -235,7 +276,13 @@
           <span class="pub-card__title">Determinism, Plausibility, and Clinical Trust in CT-to-MRI Translation for Emergency Spine Imaging</span>
           <span class="pub-card__venue">Applications of Medical AI (AMAI 2026), MICCAI 2026</span>
         </div>
-        <span class="pub-card__arrow" aria-hidden="true">→</span>
+        <div class="pub-card__footer">
+          <div class="pub-card__logos">
+            <img class="pub-card__logo" src="images/logos/amai_logo.png" alt="AMAI">
+            <img class="pub-card__logo" src="images/logos/miccai.png" alt="MICCAI">
+          </div>
+          <span class="pub-card__arrow" aria-hidden="true">→</span>
+        </div>
       </a>
 
       <a href="publications/paper2.html" class="pub-card" data-year="2026">
@@ -244,7 +291,12 @@
           <span class="pub-card__title">Beyond Averaging Metrics: Patient-specific and Spatially Localised Evaluation of Synthetic MRI for Suspected Cauda Equina Syndrome</span>
           <span class="pub-card__venue">Medical Image Understanding and Analysis (MIUA 2026)</span>
         </div>
-        <span class="pub-card__arrow" aria-hidden="true">→</span>
+        <div class="pub-card__footer">
+          <div class="pub-card__logos">
+            <img class="pub-card__logo" src="images/logos/MIUA_logo.png" alt="MIUA">
+          </div>
+          <span class="pub-card__arrow" aria-hidden="true">→</span>
+        </div>
       </a>
 
       <a href="publications/paper3.html" class="pub-card" data-year="2026">
@@ -253,7 +305,12 @@
           <span class="pub-card__title">Redefining Emergency Spinal Imaging Pathways: A Feasibility Study using Synthetic MRI from CT in the Diagnosis of Cauda Equina Syndrome</span>
           <span class="pub-card__venue">Medical Image Understanding and Analysis (MIUA 2026)</span>
         </div>
-        <span class="pub-card__arrow" aria-hidden="true">→</span>
+        <div class="pub-card__footer">
+          <div class="pub-card__logos">
+            <img class="pub-card__logo" src="images/logos/MIUA_logo.png" alt="MIUA">
+          </div>
+          <span class="pub-card__arrow" aria-hidden="true">→</span>
+        </div>
       </a>
 
       <a href="publications/paper1.html" class="pub-card" data-year="2026">
@@ -262,7 +319,12 @@
           <span class="pub-card__title">Quantitative and qualitative assessment of generative AI for cross-modal CT-to-MRI translation in spine imaging</span>
           <span class="pub-card__venue">IEEE International Symposium on Biomedical Imaging (ISBI 2026)</span>
         </div>
-        <span class="pub-card__arrow" aria-hidden="true">→</span>
+        <div class="pub-card__footer">
+          <div class="pub-card__logos">
+            <img class="pub-card__logo" src="images/logos/isbi_logo.png" alt="ISBI">
+          </div>
+          <span class="pub-card__arrow" aria-hidden="true">→</span>
+        </div>
       </a>
 
       <a href="publications/sashimi.html" class="pub-card" data-year="2025">
@@ -271,7 +333,13 @@
           <span class="pub-card__title">Lesion‐Aware CT-to-MRI Synthesis using a Mask‐Informed Diffusion with Adaptive‐Weighted Loss (MIDAS)</span>
           <span class="pub-card__venue">Simulation and Synthesis in Medical Imaging (SASHIMI 2025), MICCAI 2025</span>
         </div>
-        <span class="pub-card__arrow" aria-hidden="true">→</span>
+        <div class="pub-card__footer">
+          <div class="pub-card__logos">
+            <img class="pub-card__logo" src="images/logos/sashimi_2025.png" alt="SASHIMI">
+            <img class="pub-card__logo" src="images/logos/miccai2025-logo.png" alt="MICCAI">
+          </div>
+          <span class="pub-card__arrow" aria-hidden="true">→</span>
+        </div>
       </a>
 
     </div>
