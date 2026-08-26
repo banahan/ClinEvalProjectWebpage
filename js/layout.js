@@ -20,7 +20,12 @@
       this.classList.add('site-header');
       this.innerHTML =
         '<nav class="site-nav" aria-label="Main">' +
-          '<div class="site-nav__partners site-nav__partners--left" aria-label="Clinical partners">' +
+          '<div class="site-nav__links">' +
+            '<a href="index.html">Home</a>' +
+            '<a href="team.html">Team</a>' +
+            '<a href="publications.html">Publications</a>' +
+          '</div>' +
+          '<div class="site-nav__partners site-nav__partners--right" aria-label="Partners">' +
             logoChip({
               chipClass: 'site-nav__logo-chip',
               logoClass: 'site-nav__logo',
@@ -28,20 +33,6 @@
               alt: 'Mater',
               title: 'Mater Misericordiae University Hospital'
             }) +
-            logoChip({
-              chipClass: 'site-nav__logo-chip',
-              logoClass: 'site-nav__logo',
-              src: 'images/logos/Pillar_logo.png',
-              alt: 'Pillar',
-              title: 'Pillar Centre for Transformative Healthcare'
-            }) +
-          '</div>' +
-          '<div class="site-nav__links">' +
-            '<a href="index.html">Home</a>' +
-            '<a href="team.html">Team</a>' +
-            '<a href="publications.html">Publications</a>' +
-          '</div>' +
-          '<div class="site-nav__partners site-nav__partners--right" aria-label="Academic and innovation partners">' +
             logoChip({
               chipClass: 'site-nav__logo-chip',
               logoClass: 'site-nav__logo',
