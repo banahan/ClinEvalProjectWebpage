@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function () {
+      var REPO = 'ClinEvalProjectWebpage';
+      var base = location.hostname.endsWith('github.io')
+        ? '/' + REPO + '/'
+        : (location.pathname.indexOf('/' + REPO) === 0 ? '/' + REPO + '/' : '/');
+      var el = document.createElement('base');
+      el.href = base;
+      document.head.appendChild(el);
+    })();
+  </script>
+  <script src="js/theme-init.js"></script>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>ClinEval — MIDAS</title>
+</head>
+<body>
+  <site-header></site-header>
+
+  <main class="page-content">
+    <h1> Quantitative assessment of video frame interpolation in coronary angiography using a novel spatio-temporal blur metric </h1>
+
+    <p><strong>Authors:</strong> David Caldwell, Paul Banahan, Rory Gallen, Laura Gambini, Prateek Mathur, Paddy Gilligan, Andrew Sharp, Ivan Casserly, and Gavin Blake</p>
+    <p><strong>Published in:</strong> Physica Medica, European Journal of Medical Physics, Volume 150</p>
+
+    <h2>Abstract</h2>
+    <section>
+    <h3>Background</h3>
+    <p>Synthetic fluoroscopy frames interpolated between real frames have been proposed as a method of reducing radiation doses in coronary angiography. Traditional full-reference image quality assessment (FR-IQA) metrics often favour strongly smoothed images and correlate poorly with expert cardiologist assessment of clinical image quality.</p>
+    </section>
+    
+    <section>
+    <h3>Methods</h3>
+    <p>Retrospective coronary angiography data from 29 patients (58 sequences at 7.5 and 15 frames per second) were processed using linear interpolation (LI), Residue Refinement Interpolation (RRIN) and Real-time Intermediate Flow Estimation (RIFE) algorithms. A three-reader observer study, based on DIMOND coronary angiography quality criteria, provided clinical image-quality scores for each sequence. A Global Noise Index (GNI), adapted from computed tomography, and BM3D, a novel extension of an established spatial blur metric into the spatio-temporal domain, were calculated for all datasets.</p>
+    </section>
+    
+    <section>
+    <h3>Results</h3>
+    <p>Original datasets achieved the highest observer scores for resolution and branch visibility, with RRIN significantly lower and RIFE not significantly different from originals. GNI ranked algorithms RRIN &lt; LI &asymp; RIFE &lt; Original, indicating that RRIN achieved the greatest noise suppression but was rated inferior due to over-smoothing. BM3D ranked algorithms Original &lt; RIFE &lt; RRIN &lt; LI (lower values indicating less blur), matching the clinical rankings and showing higher blur at 7.5 fps than at 15 fps.</p>
+    </section>
+    
+    <section>
+    <h3>Conclusions</h3>
+    <p>BM3D provides a transparent spatio-temporal blur metric that aligns with expert assessment of coronary angiography image quality, in contrast to traditional FR-IQA metrics. BM3D is therefore a promising tool for objective assessment and optimisation of clinical dynamic x-ray imaging.</p>
+
+
+    <h2>Links</h2>
+    <ul>
+      <li><a href="https://doi.org/10.1016/j.ejmp.2026.107181" rel="noopener noreferrer">Link to Paper</a></li>
+    </ul>
+
+    <!--h2>Poster</h2>
+    <figure class="figure-center">
+      <img class="poster-image" src="images/sashimi.PNG" alt="Paper as a Poster">
+    </figure-->
+  </main>
+
+  <site-footer></site-footer>
+
+  <div id="theme-app"></div>
+  <script src="js/layout.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
